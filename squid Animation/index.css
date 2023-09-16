@@ -1,0 +1,130 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fc934d;
+}
+.container{
+    height:35em;
+    width:35em;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.squid{
+    height:18.5em;
+    width:18.5em;
+    background:linear-gradient(#ff034d,#f53e2f);
+    border-radius: 50%;
+    position: absolute;
+ margin: auto;
+    left:0;
+    top:0;
+    right:0;
+    animation:swim 3s infinite;
+}
+@keyframes swim {
+    50%{
+        transform: translateY(6.25em) scaleZ(0.75);
+    }
+}
+.squid:before{
+    position:absolute;
+    content:"";
+    height:2.5em;
+    width:2.5em;
+    background-color: white;
+    border-radius: 50%;
+    top:11.5em;
+    left:3.8em;
+    box-shadow: 7.5em 0em white;
+}
+.squid:after{
+    position:absolute;
+    content:"";
+    height:3.5em;
+    width: 3.5em;
+    background-color: #000000;
+    border-radius: 50%;
+    border:0.62em solid #ffffff;
+    top:7.5em;
+    left:3.5em;
+    box-shadow: 6.25em 0 0 -0.63em #000000, 6.25em 0 #ffffff ;
+
+}
+.shine{
+    position: absolute;
+    border:0.65em solid #ffffff;
+    height:3.75em;
+    width:6.25em;
+    border-radius: 50%;
+    border-color: transparent;
+    border-top-color:#ffffff ;
+    transform: rotate(-35deg);
+    top:2.5em;
+    left:3em;
+}
+.shine:before{
+    position:absolute;
+    content:"";
+    height:0.65em;
+    width:0.65em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top:0.62em;
+    left:-0.62em;
+}
+.shine:after{
+    position:absolute;
+    content:"";
+    height:3.75em;
+    width:3.75em;
+    border:0.63em solid black;
+    transform:rotate(35deg);
+    border-radius: 50%;
+    border-color: transparent;
+    border-bottom-color:#000000 ;
+    left:-2.5em;
+    top:7.5em;
+}
+.legs{
+    position: absolute;
+    height:7em;
+    width:2em;
+    background-color: #f53e2f;
+    border: 3.12em;
+    border-radius: 3.2em;
+    top:17em;
+    left:7.5em;
+    z-index: -1;
+}
+.legs::before,.legs::after{
+    position: absolute;
+    content:"";
+    height:7.5em;
+    width:2em;
+    border-radius: 3.12em;
+    background-color: #f53e2f;
+    border-radius: 3.12em;
+    bottom:0;
+    z-index: -1;
+}
+.legs:before{
+    transform: rotate(-30deg);
+    left:3.2em;
+    z-index: -1;
+}
+.legs:after{
+    transform: rotate(30deg);
+    left:-3.2em;
+    z-index: -1;
+}
+@media screen and (min-width:800px) {
+    .container{
+        font-size: 1.2em;
+    }
+    
+}
