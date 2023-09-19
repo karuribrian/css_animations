@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #341264;
+}
+.container{
+    position:absolute;
+    height:31.25em;
+    width:31.25em;
+   
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+
+}
+.planets{
+    width:15em;
+    height:15em;
+    background-color: #f5d302;
+    border-radius:50%;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    position:absolute;
+    z-index: 1;
+    
+}
+.planets:before{
+    content:"";
+    position:absolute;
+    height:1.5em;
+    width:1.5em;
+    background-color: #d69d00;
+    top:6em;
+    left:3em;
+    border-radius: 50%;
+    box-shadow: 2em 5em 0 0.6em #d69d00, 3em 0.9em #d69d00, -3em -0.5em #d69d00;
+}
+.satelite{
+       position:relative;
+    width:2em;
+    height: 2em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    left:5em;
+    bottom:-20em;
+    animation:spin 3s infinite;
+    z-index: 1;
+}
+@keyframes spin {
+    49%{
+        z-index: 1;
+    }
+    50%{
+        bottom:-9em;
+        left:23em;
+        z-index: -1;
+    }
+    100%{
+        z-index: -1;
+    }
+    
+}
